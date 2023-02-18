@@ -16,4 +16,10 @@ public class EmployeesTest {
         Assertions.assertNotSame(employeeRepository.findAll(),employeeRepositoryStub.findAll());
 
     }
+
+    @Test
+    void testIfPayEmployeesWorks() {
+        int payouts = employees.payEmployees();
+        Assertions.assertEquals(1, payouts);
+    }
 }
